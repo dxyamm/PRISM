@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prism-gad"
+version = "0.1.0"
+description = "Relational, neighborhood, and task-sensitive scoring for frozen APF representations"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.26,<3", "scipy>=1.11,<2", "torch>=2.3"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["prism*"]
